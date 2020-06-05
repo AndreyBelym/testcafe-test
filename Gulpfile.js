@@ -743,8 +743,8 @@ function testFunctional (src, testingEnvironmentName, { allowMultipleWindows, ex
     if (experimentalCompilerService)
         process.env.EXPERIMENTAL_COMPILER_SERVICE = 'true';
 
-    if (!process.env.BROWSERSTACK_NO_LOCAL)
-        process.env.BROWSERSTACK_NO_LOCAL = 1;
+    // if (!process.env.BROWSERSTACK_NO_LOCAL)
+    //     process.env.BROWSERSTACK_NO_LOCAL = 1;
 
     if (DEV_MODE)
         process.env.DEV_MODE = 'true';

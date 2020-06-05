@@ -1,7 +1,7 @@
 const os = require('os');
 
 const isTravisEnvironment = !!process.env.TRAVIS;
-const hostname            = isTravisEnvironment ? os.hostname() : '127.0.0.1';
+const hostname            = isTravisEnvironment ? os.hostname() : null;
 
 const browserProviderNames = {
     sauceLabs:    'sauceLabs',
@@ -33,8 +33,6 @@ testingEnvironments[testingEnvironmentNames.osXDesktopAndMSEdgeBrowsers] = {
         accessKey: process.env.BROWSER_STACK_ACCESS_KEY
     },
 
-    retryTestPages: true,
-
     browsers: [
         {
             browserName: 'browserstack:safari@11.1:OS X High Sierra',
@@ -45,7 +43,7 @@ testingEnvironments[testingEnvironmentNames.osXDesktopAndMSEdgeBrowsers] = {
             alias:       'chrome-osx'
         },
         {
-            browserName: 'browserstack:firefox@72:OS X High Sierra',
+            browserName: 'browserstack:firefox@76:OS X High Sierra',
             alias:       'firefox-osx'
         },
         {
