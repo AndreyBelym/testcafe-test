@@ -49,6 +49,14 @@ testingEnvironments[testingEnvironmentNames.osXDesktopAndMSEdgeBrowsers] = {
         {
             browserName: 'browserstack:edge:OS X High Sierra',
             alias:       'edge'
+        },
+        {
+            browserName: 'browserstack:iPad Pro 12.9 2017@11',
+            alias:       'ipad'
+        },
+        {
+            browserName: 'browserstack:iPhone 7 Plus@10',
+            alias:       'iphone'
         }
     ]
 };
